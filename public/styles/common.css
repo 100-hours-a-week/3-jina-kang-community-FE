@@ -1,0 +1,21 @@
+/* 헤더 CSS 추가 필요 */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #E6E8F0;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 16px 0;
+}
+
+/* 컨테이너 공통 여백 */
+main.container {
+    margin-top: 16px;
+}
+
+
+
+

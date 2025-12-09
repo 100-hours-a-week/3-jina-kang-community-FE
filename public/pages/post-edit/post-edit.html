@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>login</title>
+
+        <!-- Materialize CSS CDN -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- 공통 CSS -->
+        <link rel="stylesheet" href="../../styles/common.css"></link>
+        <link rel="stylesheet" href="../../styles/header.css"></link>
+        <!-- 게시글 수정 페이지 CSS -->
+        <link rel="stylesheet" href="./post-edit.css">
+
+    </head>
+    <body>
+        <header></header>
+        <main class="container">
+            <div class="row">
+                <div class="col s12 m8 offset-m2 l6 offset-l3">
+                    <!-- 헤더: 뒤로가기 / 저장 버튼 -->
+                    <div class="post-edit-header">
+                        <button type="button" id="back-btn" class="btn waves-effect waves-light btn-back">
+                            <i class="material-icons">arrow_back</i>
+                        </button>
+                        <button type="button" id="post-save-btn" class="btn waves-effect waves-light btn-save">
+                            저장
+                        </button>
+                    </div>
+
+                    <!-- 폼 -->
+                    <form id="post-form">
+                        <!-- 제목 입력 카드 -->
+                        <div class="post-input-card">
+                            <input id="post-title" type="text" placeholder="제목" required>
+                        </div>
+
+                        <!-- 본문 입력 카드 -->
+                        <div class="post-input-card">
+                            <textarea id="post-content" placeholder="본문" required></textarea>
+                        </div>
+
+                        <!-- 파일 첨부 버튼 -->
+                        <div class="file-upload-section">
+                            <button type="button" class="btn waves-effect waves-light btn-file">
+                                파일 첨부
+                            </button>
+                            <input type="file" id="file-input" accept="image/*" multiple style="display: none;">
+                        </div>
+
+                        <!-- 이미지 미리보기 영역 -->
+                        <div id="file-preview-list" class="file-preview-list"></div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <!-- Materialize JS CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- layout.js -->
+        <script type="module" src="../../utils/layout.js"></script>
+        <!-- post-edit.js -->
+        <script type="module" src="./post-edit.js"></script>
+   </body>
+</html>
